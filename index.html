@@ -32,17 +32,25 @@
         <h2>Abstract</h2>
         <hr>
         <p>
-          Most existing vision-language navigation tasks assume that instructions are complete and unambiguous.
-          In realistic robot deployment, however, a user may describe an intended target with incomplete,
-          ambiguous, or spatially underspecified language. Interactive Instance Goal Navigation captures this
-          setting by requiring an embodied agent to identify the intended object instance while resolving
-          uncertainty through active dialogue.
+          Most existing vision-language navigation tasks assume that instructions are complete and
+          unambiguous. However, real-world robots often encounter natural human instructions that are
+          ambiguous, underspecified, or incomplete, requiring them to resolve such uncertainties through
+          active questioning. Interactive Instance Goal Navigation (IIGN) requires an embodied agent to find
+          the specific instance under an ambiguous category-level instruction through active dialogue.
         </p>
         <p>
-          SAIN is a zero-shot framework that converts dialogue feedback into persistent navigation state.
-          Rather than treating answers as one-step textual hints, SAIN organizes them as target evidence,
-          route-level memory, object-candidate labels, and structured spatial context. These states support
-          frontier selection, candidate re-observation, and final target approach under incomplete instructions.
+          However, existing dialog-enabled methods often consume oracle answers as transient textual context
+          for immediate decisions, rather than persistent spatial or object-centric structured state. We present
+          SAIN, a zero-shot framework that turns active dialogue into persistent navigation state. Instead of
+          consuming oracle answers as one-step text hints, SAIN compiles them into target evidence, route-level
+          corridor memory, and object-candidate labels.
+        </p>
+        <p>
+          These states are stored in structured value, room, graph, and object memories, then consumed by a
+          unified policy for frontier ranking and final target approach. On the VL-LN IIGN benchmark, SAIN
+          improves SR from 20.2 to 25.4 and SPL from 13.07 to 14.17 over the strongest reported dialog-enabled
+          baseline, while requiring no task-specific policy training. The results support dialogue-to-state
+          conversion as an effective zero-shot mechanism for long-horizon interactive instance navigation.
         </p>
       </div>
     </section>
