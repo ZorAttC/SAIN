@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SAIN: Structure-Aware Interactive Navigation with Active Dialogue Grounding">
+  <title>SAIN: Structure-Aware Interactive Navigation</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Interactive Instance Goal Navigation</p>
+      <h1>SAIN: Structure-Aware Interactive Navigation with Active Dialogue Grounding</h1>
+      <p class="authors">
+        Yuhao Cao<sup>1</sup>, Xiao Liu<sup>1</sup>, Haoyao Chen<sup>1</sup>
+      </p>
+      <p class="affiliation">
+        <sup>1</sup>Networked Robotics and Systems Lab, Harbin Institute of Technology, Shenzhen
+      </p>
+      <div class="actions" aria-label="Project links">
+        <a class="button" href="https://github.com/ZorAttC/SAIN" target="_blank" rel="noopener">Code</a>
+        <span class="button disabled" aria-disabled="true">Paper Coming Soon</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container narrow">
+        <h2>Abstract</h2>
+        <p>
+          Most existing vision-language navigation tasks assume that instructions are complete and unambiguous.
+          In realistic robot deployment, however, a user may describe an intended target with incomplete,
+          ambiguous, or spatially underspecified language. Interactive Instance Goal Navigation captures this
+          setting by requiring an embodied agent to identify the intended object instance while resolving
+          uncertainty through active dialogue.
+        </p>
+        <p>
+          SAIN is a zero-shot framework that converts dialogue feedback into persistent navigation state.
+          Rather than treating answers as one-step textual hints, SAIN organizes them as target evidence,
+          route-level memory, object-candidate labels, and structured spatial context. These states support
+          frontier selection, candidate re-observation, and final target approach under incomplete instructions.
+        </p>
+      </div>
+    </section>
+
+    <section class="section schema-section">
+      <div class="container">
+        <figure class="image-panel">
+          <img src="assets/imgs/schema.png" alt="SAIN task schema">
+        </figure>
+        <div class="triad" aria-label="SAIN motivation">
+          <article>
+            <h3>Real-World Challenge</h3>
+            <p>
+              Users rarely provide perfectly grounded navigation commands. Robots must handle missing
+              attributes, ambiguous instances, and changing evidence gathered during exploration.
+            </p>
+          </article>
+          <article>
+            <h3>Existing Gap</h3>
+            <p>
+              Prior navigation systems often consume dialogue as transient language, which limits their
+              ability to preserve spatial, object, and route-level evidence across long-horizon decisions.
+            </p>
+          </article>
+          <article>
+            <h3>Why SAIN</h3>
+            <p>
+              SAIN makes dialogue actionable by storing grounded evidence in structured memories that can be
+              queried throughout exploration, re-observation, and target confirmation.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>System Overview</h2>
+        <figure class="image-panel">
+          <img src="assets/imgs/system_overview.png" alt="SAIN system overview">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section results-section">
+      <div class="container">
+        <h2>Main Experimental Results</h2>
+
+        <div class="result-block" data-gallery="simulation">
+          <div class="result-header">
+            <h3>Simulation Cases</h3>
+            <p>Compressed MP4 rollouts for representative simulated environments.</p>
+          </div>
+          <div class="case-buttons" role="tablist" aria-label="Simulation cases">
+            <button type="button" data-video="assets/videos/simulation_cases/bed.mp4" data-title="Bed">Bed</button>
+            <button type="button" data-video="assets/videos/simulation_cases/chair.mp4" data-title="Chair">Chair</button>
+            <button type="button" data-video="assets/videos/simulation_cases/couch.mp4" data-title="Couch">Couch</button>
+            <button type="button" data-video="assets/videos/simulation_cases/fireplace.mp4" data-title="Fireplace">Fireplace</button>
+            <button type="button" data-video="assets/videos/simulation_cases/ovon.mp4" data-title="OVON">OVON</button>
+            <button type="button" data-video="assets/videos/simulation_cases/washing_machine.mp4" data-title="Washing Machine">Washing Machine</button>
+          </div>
+          <div class="video-shell">
+            <div class="video-placeholder">Select a simulation case</div>
+            <video controls playsinline preload="none" aria-label="Simulation result video"></video>
+          </div>
+        </div>
+
+        <div class="result-block" data-gallery="real">
+          <div class="result-header">
+            <h3>Real-Robot Cases</h3>
+            <p>Compressed MP4 rollouts for physical robot demonstrations.</p>
+          </div>
+          <div class="case-buttons" role="tablist" aria-label="Real robot cases">
+            <button type="button" data-video="assets/videos/real_robot/TV.mp4" data-title="TV">TV</button>
+            <button type="button" data-video="assets/videos/real_robot/demo_table.mp4" data-title="Demo Table">Demo Table</button>
+            <button type="button" data-video="assets/videos/real_robot/extinguisher.mp4" data-title="Extinguisher">Extinguisher</button>
+            <button type="button" data-video="assets/videos/real_robot/packbag.mp4" data-title="Packbag">Packbag</button>
+            <button type="button" data-video="assets/videos/real_robot/trophy.mp4" data-title="Trophy">Trophy</button>
+            <button type="button" data-video="assets/videos/real_robot/umbrella.mp4" data-title="Umbrella">Umbrella</button>
+          </div>
+          <div class="video-shell">
+            <div class="video-placeholder">Select a real-robot case</div>
+            <video controls playsinline preload="none" aria-label="Real robot result video"></video>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>SAIN project page.</span>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
