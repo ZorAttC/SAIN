@@ -179,6 +179,11 @@ h3 {
   text-align: justify;
 }
 
+.abstract-text p {
+  font-size: 1.18rem;
+  line-height: 1.65;
+}
+
 .image-panel {
   width: 90%;
   margin: 0 auto;
