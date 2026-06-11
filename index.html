@@ -26,6 +26,11 @@
     </div>
   </header>
 
+  <nav class="side-jump" aria-label="Experiment navigation">
+    <a href="#simulation-cases">Simulation</a>
+    <a href="#real-robot-cases">Real Robot</a>
+  </nav>
+
   <main>
     <section class="section">
       <div class="container narrow">
@@ -101,7 +106,34 @@
         <h2>Main Experimental Results</h2>
         <hr>
 
-        <div class="result-block" data-gallery="simulation">
+        <div class="table-wrap">
+          <table class="benchmark-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>SR &uarr;</th>
+                <th>SPL &uarr;</th>
+                <th>OS &uarr;</th>
+                <th>NE &darr;</th>
+                <th>Avg Steps &darr;</th>
+                <th>Avg Q. &darr;</th>
+                <th>MSP &uarr;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>FBE</td><td>8.4</td><td>4.74</td><td>25.2</td><td>11.84</td><td>-</td><td>-</td><td>-</td></tr>
+              <tr><td>VLFM</td><td>10.2</td><td>6.42</td><td>32.4</td><td>11.17</td><td>-</td><td>-</td><td>-</td></tr>
+              <tr><td>VLLN-I</td><td>14.2</td><td>8.18</td><td>47.8</td><td>9.54</td><td>-</td><td>-</td><td>-</td></tr>
+              <tr><td>VLLN-D0</td><td>15.4</td><td>9.86</td><td>55.2</td><td>9.17</td><td>-</td><td>0.00</td><td>0.00</td></tr>
+              <tr><td>VLLN-D</td><td>20.2</td><td>13.07</td><td><strong>56.8</strong></td><td>8.84</td><td>-</td><td>1.76</td><td>2.73</td></tr>
+              <tr><td>SAIN-D0</td><td>11.6</td><td>1.56</td><td>56.0</td><td>10.65</td><td>468.2</td><td>0.00</td><td>0.00</td></tr>
+              <tr><td>SAIN-D1</td><td>20.6</td><td>10.43</td><td>44.2</td><td>9.63</td><td>248.4</td><td>1.00</td><td><strong>9.00</strong></td></tr>
+              <tr class="highlight"><td>SAIN-D</td><td><strong>25.4</strong></td><td><strong>14.17</strong></td><td>46.0</td><td><strong>8.06</strong></td><td><strong>217.6</strong></td><td>4.58</td><td>3.02</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="result-block" id="simulation-cases" data-gallery="simulation">
           <div class="result-header">
             <h3>Simulation Cases</h3>
           </div>
@@ -119,7 +151,7 @@
           </div>
         </div>
 
-        <div class="result-block" data-gallery="real">
+        <div class="result-block" id="real-robot-cases" data-gallery="real">
           <div class="result-header">
             <h3>Real-Robot Cases</h3>
           </div>
