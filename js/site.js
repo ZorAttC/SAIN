@@ -17,6 +17,7 @@ document.querySelectorAll("[data-gallery]").forEach((gallery) => {
       video.load();
       video.src = source;
       video.load();
+      video.play().catch(() => {});
 
       shell.classList.add("loaded");
       placeholder.textContent = title;
