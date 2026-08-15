@@ -18,6 +18,10 @@ The core idea is **dialogue-to-state conversion**. Instead of treating oracle an
 
 On the VL-LN IIGN benchmark, SAIN improves success rate from 20.2 to 25.4 and SPL from 13.07 to 14.17 over the strongest reported dialogue-enabled baseline.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ZorAttC/SAIN/gh-pages/assets/imgs/system_overview.png" width="92%" alt="SAIN system overview">
+</p>
+
 ## Table of Contents
 
 - [Overview](#overview)
